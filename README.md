@@ -34,13 +34,26 @@ The biggest difference is that the '.forEach' method does not return a new array
 
 
 2. What is the difference between a function and a method?
+
 The difference is a method is a function that belongs to an object within the object's scope. 
 
 3. What is closure?
 
 4. Describe the four rules of the 'this' keyword.
 
+The first one is: whenever a function is contained in the global scope, the value of "this" inside of that function will be the window/console Object. Functions within the global scope are in fact methods on the window object.
+The second one is: when we call a function by a preceding dot the "this" refers to the object before this dot
+The third one: When we use a constructor function, which returns an object , the keyword refers to the specific instance of the object that is created and returned by the constructor function
+The last one: .call and .apply methods alllow you to execute a function in a different context. Thus when these methods are  used, the first argument passed to either is explicitly defined to what "this" points too.
+
+
 5. Why do we need super() in an extended class?
+
+Because of inhertiance. It is needed to pass any new attributes back up to the constructor of the parent object. It alerts the  parent’s constructor that it needs to be conerned with the child’s attributes.
+ It thus works with 'extends' keyword to form simple object inheritance in classes.
+
+
+
 
 ## Project Set up
 

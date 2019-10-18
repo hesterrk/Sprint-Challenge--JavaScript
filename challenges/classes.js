@@ -18,6 +18,13 @@ class CuboidMaker {
     }
   
   }
+
+  class cuboidOne extends CuboidMaker { 
+    constructor(length, width, height) {
+      super(length, width, height);
+    }
+  }
+  
   
 
 

@@ -39,6 +39,11 @@ The difference is a method is a function that belongs to an object within the ob
 
 3. What is closure?
 
+A closure refers to a function and its local variables and the lexical enviroment with which the function was declared in. A new scope is created when a function is created and declared, any variables declared within this scope are enclosed in a lexical scope. Closure controls what is and what is not aviable to the scope in a particular function. For instance the variables and functions declared within that function have access to variables defined outside the scope and local variables within the outer function scope. If a variable is not defined within that lexical function's scope it will always look outward for context to search for it. However, functions or variables declared cannot be accessed/used outside their closure.   
+
+
+
+
 4. Describe the four rules of the 'this' keyword.
 
 The first one is: whenever a function is contained in the global scope, the value of "this" inside of that function will be the window/console Object. Functions within the global scope are in fact methods on the window object.

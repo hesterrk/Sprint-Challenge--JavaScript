@@ -34,6 +34,7 @@ The biggest difference is that the '.forEach' method does not return a new array
 
 
 2. What is the difference between a function and a method?
+The difference is a method is a function that belongs to an object within the object's scope. 
 
 3. What is closure?
 

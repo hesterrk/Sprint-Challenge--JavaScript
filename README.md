@@ -43,7 +43,6 @@ A closure refers to a function and its local variables and the lexical enviromen
 
 
 
-
 4. Describe the four rules of the 'this' keyword.
 
 The first one is: whenever a function is contained in the global scope, the value of "this" inside of that function will be the window/console Object. Functions within the global scope are in fact methods on the window object.

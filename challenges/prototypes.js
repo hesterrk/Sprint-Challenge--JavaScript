@@ -42,7 +42,7 @@ CuboidMaker.prototype.surfaceArea = function() {
 
 var cuboidOne = new CuboidMaker({
   length: 4,
- width: 5,
+  width: 5,
   height: 5,
 
 });

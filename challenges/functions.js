@@ -41,7 +41,7 @@ console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice t
 
 // Explain in your own words why nestedfunction can access the variable internal.
 
-// Explanation: The 'nestedFunction' is nested within the 'myFunction' and although the former is a closure, with its own local scope, it can still access 'myFunction' variable. This is because inner functions always look outside for context to look for a variable passed in it. They thus have access to variables in the outer functions. 
+// My Explanation: The 'nestedFunction' is nested within the 'myFunction' and although the former is a closure, with its own local scope, it can still access 'myFunction' variable. This is because inner functions always look outside for context to look for a variable passed in it. They thus have access to variables in the outer functions. 
 
 
 

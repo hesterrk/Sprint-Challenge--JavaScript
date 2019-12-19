@@ -12,6 +12,7 @@ function CuboidMaker(attributes) {
 
 }
 
+//giving birth
 
 
 /* == Step 2: Volume Method ==
@@ -35,6 +36,13 @@ CuboidMaker.prototype.surfaceArea = function() {
    
    }
 
+
+   CuboidMaker.prototype.meihere = function(){
+     return (this.length + this.width + this.height);
+
+
+   }
+
 /* == Step 4: Create a new object that uses CuboidMaker ==
   Create a cuboid object that uses the new keyword to use our CuboidMaker constructor
   Add properties and values of length: 4, width: 5, and height: 5 to cuboid.   
@@ -47,8 +55,25 @@ var cuboidOne = new CuboidMaker({
 
 });
 
+var cuboidMei = new CuboidMaker ({
+  length: 10,
+  width: 10,
+  height: 10,
+
+});
+
+
+// var cuboidTwo = new CuboidMaker({
+//   length: 3,
+//   width: 5,
+//   height: 0,
+
+// });
+
+
 // Test your volume and surfaceArea methods by uncommenting the logs below:
- console.log(cuboidOne.volume()); // 100
- console.log(cuboidOne.surfaceArea()); // 130
+console.log(cuboidMei.meihere()); 
+console.log(cuboidOne.volume()); // 100
+console.log(cuboidOne.surfaceArea()); // 130
 
 

@@ -135,22 +135,83 @@ The zoos want to display both the scientific name and the animal name in front o
 */
 const displayNames = [];
 
-zooAnimals.forEach((obj) => displayNames.push(`Name: ${obj.animal_name}, Scientific: ${obj.scientific_name}`)
+zooAnimals.forEach((obj) => displayNames.push(`Name: ${obj.animal_name}, Scientific: ${obj.scientific_name}`
+))
 
-)
+console.log(displayNames)
 
-console.log(displayNames);
 
+const newdisplayNames = [];
+for (let i = 0; i < zooAnimals.length; i++){
+ newdisplayNames.push(`Name: ${zooAnimals[i].animal_name}, Scientific: ${zooAnimals[i].scientific_name}`)
+} 
+ 
+console.log(newdisplayNames)
+
+
+//const newDisplayNames = [];
+
+//  function Zoo(obj) {
+
+//   return zooAnimals.forEach(newDisplayNames.push(`Name: ${obj.animal_name}, Scientific: ${obj.scientific_name}`))
+// }
+// console.log(newDisplayNames);
+
+// console.log(displayNames);
+
+zooAnimals.forEach (function(animals) {
+  return (newDisplayNames.push(`Name: ${animals.animal_name}, Scientific: ${animals.scientific_name}`))
+});
+console.log(newDisplayNames);
 /* Request 2: .map()
 
 The zoos need a list of all their animal's names (animal_name only) converted to lower case. Using map, create a new array of strings named lowCaseAnimalNames, each string following this pattern: "jackal, asiatic". Log the resut.
 
 */
+function makeLowerCase (name) {
+  return name.animal_name.toLowerCase;
 
-const lowCaseAnimalNames = [];
-zooAnimals.map((name) => lowCaseAnimalNames.push(`${name.animal_name}`.toLowerCase()))
+} //this is the cb declaration above //
+
+const lowCaseAnimalNames = zooAnimals.map(makeLowerCase) //makeLower case is passing the argument which is refence to the cb function that we have defined above   //((name) => name.animal_name.toLowerCase())
 
 console.log(lowCaseAnimalNames);
+
+//zooAnimals.map(makeLowerCase) -is the function call//
+
+function makeLowerCase (name) {
+  return name.animal_name.toLowerCase;
+
+}
+const lowCaseAnimalNames = zooAnimals.map(makeLowerCase)   
+console.log(lowCaseAnimalNames);
+
+
+
+// -how to  define map
+// :basically does the same thing as a for loop that gives you back a new array 
+
+
+// function Map(array, function-that-transforms-each-element) {   //cb//
+// 	let newArray=[];
+// 	for (let i=0; i<array.length; i++) {
+// 	let newElement = function-that-transforms-each-element(array[i])
+// 	newArray.push(newElement)
+// }
+// return newArray
+// }
+
+
+
+//map function calls the cb on each element of the array
+//calling the function— the cb, which transforms each element of the array 
+
+
+
+
+
+
+
 
 /* Request 3: .filter() 
 
@@ -161,6 +222,10 @@ The zoos are concerned about animals with a lower population count. Using filter
 const lowPopulationAnimals = zooAnimals.filter(count => count.population < 5);
 
 console.log(lowPopulationAnimals);
+
+//count is the parameter for the cb//
+//arrow syntax defines the cb function for you//
+//if you want to get a property from the element of the array you have to use dot notation//- use the cb parameter as the cb gets called with each element of the atrray that gets passed in it
 
 /* Request 4: .reduce() 
 

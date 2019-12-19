@@ -50,7 +50,19 @@ class CubeMaker extends CuboidMaker {
   constructor(length, width, height, edge) {
     super(length, width, height);
     this.edge = edge;
-
-
   }
+
+volOfCube() {
+  return (this.edge) * (this.edge) * (this.edge);
 }
+surfaceAreaCube() {
+  return (this.edge) * (this.edge) * (this.edge) * (this.edge) * (this.edge) * (this.edge);
+}
+
+
+}
+
+var cubey = new CubeMaker(5, 5, 5, 5);
+
+console.log(cubey.volOfCube());
+console.log(cubey.surfaceAreaCube());

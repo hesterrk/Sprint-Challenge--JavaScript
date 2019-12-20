@@ -37,11 +37,11 @@ CuboidMaker.prototype.surfaceArea = function() {
    }
 
 
-   CuboidMaker.prototype.meihere = function(){
-     return (this.length + this.width + this.height);
+  //  CuboidMaker.prototype.meihere = function(){
+  //    return (this.length + this.width + this.height);
 
 
-   }
+  //  }
 
 /* == Step 4: Create a new object that uses CuboidMaker ==
   Create a cuboid object that uses the new keyword to use our CuboidMaker constructor
@@ -55,12 +55,12 @@ var cuboidOne = new CuboidMaker({
 
 });
 
-var cuboidMei = new CuboidMaker ({
-  length: 10,
-  width: 10,
-  height: 10,
+// var cuboidMei = new CuboidMaker ({
+//   length: 10,
+//   width: 10,
+//   height: 10,
 
-});
+// });
 
 
 // var cuboidTwo = new CuboidMaker({
@@ -72,7 +72,6 @@ var cuboidMei = new CuboidMaker ({
 
 
 // Test your volume and surfaceArea methods by uncommenting the logs below:
-console.log(cuboidMei.meihere()); 
 console.log(cuboidOne.volume()); // 100
 console.log(cuboidOne.surfaceArea()); // 130
 

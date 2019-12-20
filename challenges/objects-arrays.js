@@ -80,10 +80,11 @@ const graduates = [
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
-for (let i = 0; i < graduates.length; i++)
+for (let i = 0; i < graduates.length; i++) {
 universities.push(graduates[i].university);
 
 universities.sort();
+}
 
 console.log(universities);
 
@@ -95,8 +96,9 @@ The resulting contact information strings should have a space between the first 
 Log the result of your new array. */
 const contactInfo = [];
 
-for (let i = 0; i < graduates.length; i++)
+for (let i = 0; i < graduates.length; i++) {
 contactInfo.push(`${graduates[i].first_name} ${graduates[i].email}`);
+}
 console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called unisWithUni that contains them all. This will be an array of objects. Log the result. */
@@ -135,11 +137,24 @@ The zoos want to display both the scientific name and the animal name in front o
 */
 const displayNames = [];
 
-zooAnimals.forEach((obj) => displayNames.push(`Name: ${obj.animal_name}, Scientific: ${obj.scientific_name}`)
+zooAnimals.forEach((obj) => displayNames.push(`Name: ${obj.animal_name}, Scientific: ${obj.scientific_name}`
+))
 
-)
+console.log(displayNames)
 
-console.log(displayNames);
+
+// const newdisplayNames = [];
+// for (let i = 0; i < zooAnimals.length; i++){
+//  newdisplayNames.push(`Name: ${zooAnimals[i].animal_name}, Scientific: ${zooAnimals[i].scientific_name}`)
+// } 
+ 
+
+// zooAnimals.forEach (function(animals) {
+//   return (newDisplayNames.push(`Name: ${animals.animal_name}, Scientific: ${animals.scientific_name}`))
+// });
+// console.log(newDisplayNames);
+
+
 
 /* Request 2: .map()
 
@@ -148,9 +163,23 @@ The zoos need a list of all their animal's names (animal_name only) converted to
 */
 
 const lowCaseAnimalNames = [];
+
 zooAnimals.map((name) => lowCaseAnimalNames.push(`${name.animal_name}`.toLowerCase()))
 
 console.log(lowCaseAnimalNames);
+
+
+
+// function Map(array, function-that-transforms-each-element) {   //cb//
+// 	let newArray=[];
+// 	for (let i=0; i<array.length; i++) {
+// 	let newElement = function-that-transforms-each-element(array[i])
+// 	newArray.push(newElement)
+// }
+// return newArray
+// }
+
+
 
 /* Request 3: .filter() 
 
@@ -161,6 +190,10 @@ The zoos are concerned about animals with a lower population count. Using filter
 const lowPopulationAnimals = zooAnimals.filter(count => count.population < 5);
 
 console.log(lowPopulationAnimals);
+
+//count is the parameter for the cb//
+//arrow syntax defines the cb function for you//
+//if you want to get a property from the element of the array you have to use dot notation//- use the cb parameter as the cb gets called with each element of the atrray that gets passed in it
 
 /* Request 4: .reduce() 
 
